@@ -1,7 +1,5 @@
 ﻿using Cinemachine;
 using EVMC4U;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ReplaceModelForEVMC4U : MonoBehaviour
