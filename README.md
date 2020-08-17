@@ -10,7 +10,8 @@
  
 ReplaceModelForEVMC4Uを適当なGameObjectにアタッチして使用して下さい。  
 設定は画像の通りです。  
-シネスイッチャーを使用していない場合、using Cinemachine周りでエラーを吐きますので、Cinemachineを導入しエラー回避してください。  
+シネスイッチャーを使用していない場合、using Cinemachine周りでエラーを吐きますので、  
+Cinemachineを導入しエラー回避してください。  
 もしくはスクリプトを書き換えてご対応下さい。以下箇条書きでの補足です。  
  
 * External Receiver：External ReceiverのGameObject指定  
