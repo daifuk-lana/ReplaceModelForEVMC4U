@@ -8,22 +8,22 @@
 # 🎙ご説明
 ![RM4EVMC4U](https://user-images.githubusercontent.com/59566441/90384451-8353c480-e0bc-11ea-8c40-9b916a947e01.png)
  
-ReplaceModelForEVMC4Uを適当なGameObjectにアタッチして使用して下さい。  
-設定は画像の通りです。  
+ReplaceModelForEVMC4Uを適当なGameObjectにアタッチして使用して下さい。設定は画像の通りです。  
+  
 シネスイッチャーを使用していない場合、using Cinemachine周りでエラーを吐きますので、  
 Cinemachineを導入しエラー回避してください。  
-もしくはスクリプトを書き換えてご対応下さい。書き換え箇所は以下のとおりです。  
+もしくはスクリプトを書き換えてご対応下さい。書き換え（コメントアウトor削除）箇所は以下のとおりです。  
 ```
-1 //using Cinemachine;  
-10    //public Transform[] ModelTransesHead = new Transform[2];  
-11    //public CinemachineVirtualCamera[] VCams = new CinemachineVirtualCamera[2];  
-84                //for (int j = 0; j < VCams.Length; j++)
-85                //{
-86                //    VCams[j].LookAt = ModelTransesHead[a];
-87                //}
+1  using Cinemachine;  
+10 public Transform[] ModelTransesHead = new Transform[2];  
+11 public CinemachineVirtualCamera[] VCams = new CinemachineVirtualCamera[2];  
+84 for (int j = 0; j < VCams.Length; j++)
+85 {
+86   VCams[j].LookAt = ModelTransesHead[a];
+87 }
 ```
  
- また、以下、各変数の箇条書きでの補足です。
+また、以下、各変数の箇条書きでの補足です。
 
 * External Receiver：External ReceiverのGameObject指定  
 * Teleport Manager：[Teleport Manager](https://github.com/gpsnmeajp/EasyVirtualMotionCaptureForUnity/wiki/TeleportKit)のGameObject指定  
