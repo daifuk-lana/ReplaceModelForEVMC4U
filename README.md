@@ -12,8 +12,19 @@ ReplaceModelForEVMC4Uを適当なGameObjectにアタッチして使用して下�
 設定は画像の通りです。  
 シネスイッチャーを使用していない場合、using Cinemachine周りでエラーを吐きますので、  
 Cinemachineを導入しエラー回避してください。  
-もしくはスクリプトを書き換えてご対応下さい。以下箇条書きでの補足です。  
+もしくはスクリプトを書き換えてご対応下さい。書き換え箇所は以下のとおりです。  
+```
+1 //using Cinemachine;  
+10    //public Transform[] ModelTransesHead = new Transform[2];  
+11    //public CinemachineVirtualCamera[] VCams = new CinemachineVirtualCamera[2];  
+84                //for (int j = 0; j < VCams.Length; j++)
+85                //{
+86                //    VCams[j].LookAt = ModelTransesHead[a];
+87                //}
+```
  
+ また、以下、各変数の箇条書きでの補足です。
+
 * External Receiver：External ReceiverのGameObject指定  
 * Teleport Manager：[Teleport Manager](https://github.com/gpsnmeajp/EasyVirtualMotionCaptureForUnity/wiki/TeleportKit)のGameObject指定  
 * Models：VRMモデルの数、GameObject指定  
